@@ -1,0 +1,38 @@
+[
+    {
+        "photo": "image/member.webp",
+        "name": "Хозе-Рауль Капабланка",
+        "desc": "Чемпион мира по шахматам",
+        "link": "#"
+    },
+    {
+        "photo": "image/member.webp",
+        "name": "Эммануил Ласкер",
+        "desc": "Чемпион мира по шахматам",
+        "link": "#"
+    },
+    {
+        "photo": "image/member.webp",
+        "name": "Александр Алехин",
+        "desc": "Чемпион мира по шахматам",
+        "link": "#"
+    },
+    {
+        "photo": "image/member.webp",
+        "name": "Арон Нимцович",
+        "desc": "Чемпион мира по шахматам",
+        "link": "#"
+    },
+    {
+        "photo": "image/member.webp",
+        "name": "Рихард Рети",
+        "desc": "Чемпион мира по шахматам",
+        "link": "#"
+    },
+    {
+        "photo": "image/member.webp",
+        "name": "Остап Бендер",
+        "desc": "Гроссмейстер",
+        "link": "#"
+    }
+]

@@ -1,0 +1,221 @@
+/* Animation Part */
+
+@supports (animation-timeline: view()) {
+
+    @media (prefers-reduced-motion: no-preference) {
+
+        .perspective {
+            perspective: 300px;
+        }
+
+        .scroll-watcher {
+            animation: watcher ease-in-out;
+            animation-timeline: scroll();
+        }
+
+        @keyframes watcher {
+            to {
+                scale: 1 1;
+            }
+        }
+
+        .animate-entry-scale-in {
+            opacity: 0;
+            scale: 0.75;
+            animation: scale_norm linear forwards;
+            animation-timeline: view();
+            animation-range-start: 5%;
+            animation-range-end: 45%;
+        }
+
+        .animate-entry-scale-out {
+            opacity: 0;
+            scale: 1.25;
+            animation: scale_norm linear forwards;
+            animation-timeline: view();
+            animation-range-start: 5%;
+            animation-range-end: 45%;
+        }
+
+        @keyframes scale_norm {
+            to {
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+        .animate-entry-to-left {
+            opacity: 0;
+            translate: 100% 0;
+            animation: translate_norm linear forwards;
+            animation-timeline: view();
+            animation-range-start: 5%;
+            animation-range-end: 45%;
+        }
+
+        .animate-entry-to-right {
+            opacity: 0;
+            translate: -100% 0;
+            animation: translate_norm linear forwards;
+            animation-timeline: view();
+            animation-range-start: 5%;
+            animation-range-end: 45%;
+        }
+
+        .animate-entry-to-top {
+            opacity: 0;
+            translate: 0 100%;
+            animation: translate_norm linear forwards;
+            animation-timeline: view();
+            animation-range-start: 5%;
+            animation-range-end: 45%;
+        }
+
+        .animate-entry-to-bottom {
+            opacity: 0;
+            translate: 0 -100%;
+            animation: translate_norm linear forwards;
+            animation-timeline: view();
+            animation-range-start: 5%;
+            animation-range-end: 45%;
+        }
+
+        @keyframes translate_norm {
+            to {
+                opacity: 1;
+                translate: 0 0;
+            }
+        }
+
+        .animate-entry-rotate-right {
+            opacity: 0;
+            scale: 0.75;
+            rotate: -360deg;
+            animation: rotate_norm linear forwards;
+            animation-timeline: view();
+            animation-range-start: 5%;
+            animation-range-end: 45%;
+        }
+
+        .animate-entry-rotate-left {
+            opacity: 0;
+            scale: 0.75;
+            rotate: 360deg;
+            animation: rotate_norm linear forwards;
+            animation-timeline: view();
+            animation-range-start: 5%;
+            animation-range-end: 45%;
+        }
+
+        @keyframes rotate_norm {
+            to {
+                opacity: 1;
+                scale: 1;
+                rotate: 0deg;
+            }
+        }
+
+        .animate-entry-opacity {
+            opacity: 0;
+            animation: opacity_norm linear forwards;
+            animation-timeline: view();
+            animation-range-start: 5%;
+            animation-range-end: 45%;
+        }
+
+        @keyframes opacity_norm {
+            to {
+                opacity: 1;
+
+            }
+        }
+
+        .animate-exit-scale-in {
+            opacity: 1;
+            scale: 1;
+            animation: scale_in linear forwards;
+            animation-timeline: view();
+            animation-range: exit;
+        }
+
+        @keyframes scale_in {
+            to {
+                opacity: 0;
+                scale: 1.5;
+            }
+        }
+
+        .animate-exit-scale-out {
+            opacity: 1;
+            scale: 1;
+            translate: 0 0;
+            animation: scale_out linear forwards;
+            animation-timeline: view();
+            animation-range-start: 50%;
+            animation-range-end: 100%;
+            /* animation-range: exit; */
+        }
+
+        @keyframes scale_out {
+            to {
+                opacity: 0;
+                translate: 0 100%;
+                scale: 0.5;
+            }
+        }
+
+
+        .animate-exit-to-bottom {
+            opacity: 1;
+            translate: 0 0;
+            animation: translate_out_bottom linear forwards;
+            animation-timeline: view();
+            /* animation-range: exit; */
+            animation-range-start: 60%;
+            animation-range-end: 100%;
+
+        }
+
+        @keyframes translate_out_bottom {
+            to {
+                opacity: 0;
+                translate: 0 100%;
+            }
+        }
+
+        .animate-exit-to-top {
+            opacity: 1;
+            translate: 0 0;
+            animation: translate_out_bottom linear forwards;
+            animation-timeline: view();
+            animation-range-start: 50%;
+            animation-range-end: 100%;
+
+        }
+
+        @keyframes translate_out_top {
+            to {
+                opacity: 0;
+                translate: 0 -100%;
+            }
+        }
+
+        .animate-exit-to-right {
+            opacity: 1;
+            translate: 0 0;
+            animation: translate_out_bottom linear forwards;
+            animation-timeline: view();
+            animation-range-start: 50%;
+            animation-range-end: 100%;
+
+        }
+
+        @keyframes translate_out_right {
+            to {
+                opacity: 0;
+                translate: 100% 0;
+            }
+        }
+
+    }
+}
